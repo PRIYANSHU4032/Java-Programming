@@ -1,0 +1,29 @@
+package String;
+
+import java.util.Scanner;
+
+public class DublicateRemoval {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the String: ");
+        String s1 = sc.nextLine();
+
+        String str=" ";
+        for (int i = 0; i < s1.length(); i++) {
+            char x = s1.charAt(i);
+            int j; //= str.length();
+            for(j=0;j<str.length();j++){
+                if(str.charAt(j) == x){
+                    break;
+                }
+
+            }
+            if(j==str.length()){
+                str = str+x;
+            }
+        }
+
+        System.out.println(str);
+
+    }
+}
